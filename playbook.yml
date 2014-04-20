@@ -1,0 +1,9 @@
+---
+
+- name: Configure Raspberry Pi
+
+  hosts: pi
+  roles:
+    - core
+  remote_user: pi
+  sudo: yes

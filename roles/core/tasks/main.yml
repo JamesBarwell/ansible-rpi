@@ -1,0 +1,12 @@
+---
+- name: 'Update apt packages'
+  command: apt-get update
+
+- name: 'Install python-apt package'
+  command: apt-get install python-apt -y
+
+- name: 'Upgrade APT to the lastest packages'
+  apt:  upgrade=safe
+
+- name: 'Install useful packages'
+  apt:  pkg=vim state=installed
