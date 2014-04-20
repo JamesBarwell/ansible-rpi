@@ -4,6 +4,10 @@
 
   hosts: pi
   roles:
+    - wifi
     - core
   remote_user: pi
   sudo: yes
+  vars_prompt:
+    wifi_ssid: "Enter wifi SSID"
+    wifi_pass: "Enter wifi password"
