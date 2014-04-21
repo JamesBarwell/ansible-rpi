@@ -14,6 +14,11 @@
       prompt: "Enter wifi password"
       default: 'N'
 
+    - name: disable_camera_led
+      prompt: "Disable camera LED?"
+      default: 'N'
+
   roles:
     - { role: wifi, when: wifi_ssid != 'N' and wifi_pass != 'N' }
     - core
+    - camera

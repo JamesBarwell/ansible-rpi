@@ -1,0 +1,7 @@
+---
+- name: 'Install video encoding packages'
+  apt:  pkg=gpac state=installed
+
+- name: 'Turn off LED'
+  lineinfile: line="disable_camera_led=1" dest=/boot/config.txt state=present
+  when: disable_camera_led == 'Y'
