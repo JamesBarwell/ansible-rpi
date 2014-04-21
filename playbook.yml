@@ -3,11 +3,17 @@
 - name: Configure Raspberry Pi
 
   hosts: pi
-  roles:
-    - wifi
-    - core
   remote_user: pi
   sudo: yes
   vars_prompt:
-    wifi_ssid: "Enter wifi SSID"
-    wifi_pass: "Enter wifi password"
+    - name: wifi_ssid
+      prompt: "Enter wifi SSID"
+      default: 'N'
+
+    - name: wifi_pass
+      prompt: "Enter wifi password"
+      default: 'N'
+
+  roles:
+    - { role: wifi, when: wifi_ssid != 'N' and wifi_pass != 'N' }
+    - core
