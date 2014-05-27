@@ -1,0 +1,16 @@
+#! /bin/sh
+# /etc/init.d/fix_amixer_volume
+
+### BEGIN INIT INFO
+# Provides:          fix_amixer_volume
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Sets amixer volume to 100%
+# Description:       Sets amixer volume to 100%, used for bug that causes volume to be set at 80% on boot
+### END INIT INFO
+
+/usr/bin/amixer cset numid=1 100%
+
+exit 0

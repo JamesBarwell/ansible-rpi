@@ -1,0 +1,17 @@
+---
+- name: 'Install mpd package'
+  apt:  pkg=mpd state=latest
+
+- name: 'Install alsa-utils package'
+  apt:  pkg=alsa-utils state=latest
+
+- name: 'Set MPD configuration file'
+  template: src=mpd.conf.j2 dest=/etc/mpd.conf mode=0600
+  notify:
+   - restart mpd
+
+- name: 'Install volume fixer script'
+  copy:  src=fix_amixer_volume dest=/etc/init.d/fix_amixer_volume mode=0755
+
+- name: 'Register volume fixer script to run at startup'
+  command:  sudo update-rc.d fix_amixer_volume defaults
