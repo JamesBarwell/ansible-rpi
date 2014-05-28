@@ -1,0 +1,6 @@
+---
+- name: 'Install node-eyefi'
+  git:  repo=https://github.com/komola/node-eyefi.git dest=/srv/eyefi
+
+- name: 'Set node-eyefi configuration file'
+  template: src=config.js.j2 dest=/srv/eyefi/config.js mode=0600

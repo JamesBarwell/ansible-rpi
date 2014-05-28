@@ -22,8 +22,17 @@
       prompt: "Disable camera LED?"
       default: 'N'
 
+    - name: eyefi_id
+      prompt: "Enter eye-fi card ID"
+      default: 'N'
+
+    - name: eyefi_key
+      prompt: "Enter eye-fi card public key"
+      default: 'N'
+
   roles:
     - { role: wifi, when: wifi_ssid != 'N' and wifi_pass != 'N' }
-    - { role: mpd_host, when: mpd_pass != 'N' }
     - core
     - camera
+    - { role: mpd_host, when: mpd_pass != 'N' }
+    - { role: eyefi_host, when: eyefi_id != 'N' and eyefi_key != 'N' }
