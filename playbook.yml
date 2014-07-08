@@ -36,3 +36,4 @@
     - camera
     - { role: mpd_host, when: mpd_pass != 'N' }
     - { role: eyefi_host, when: eyefi_id != 'N' and eyefi_key != 'N' }
+    - retropie

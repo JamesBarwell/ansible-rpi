@@ -19,3 +19,6 @@ Sets up an image download host for the [Eye-Fi SD cards](http://www.eyefi.com/) 
 
 ## mpd_host
 Sets up an MPD music playing host.
+
+## retropie
+Sets up RetroPie emulators.

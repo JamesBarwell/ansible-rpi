@@ -1,0 +1,12 @@
+---
+- name: 'Install dialog package'
+  apt:  pkg=dialog state=installed
+
+- name: 'Download RetroPie script'
+  git:  repo=git://github.com/petrockblog/RetroPie-Setup.git dest=~/ depth=1
+
+- name: 'Make script executable'
+  file: path=~/RetroPie-Setup/retropie_setup.sh mode=0755
+
+- name: 'Run script'
+  command: sh ~/RetroPie-Setup/retropie_setup.sh
