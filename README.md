@@ -1,12 +1,12 @@
 ansible-rpi
 ======
 
-My Ansible configuration for Raspberry Pi. This allows me to provision Raspberry Pis to carry out a specific set of roles after installing Raspbian and running the Raspberry Pi setup script.
+My [Ansible](http://www.ansible.com/) configuration for [Raspberry Pi](http://www.raspberrypi.org/). This allows me to provision Raspberry Pis to carry out a specific set of roles, having [installed Raspbian](http://www.raspberrypi.org/documentation/installation/installing-images/README.md) and running the Raspberry Pi setup script after first boot.
 
 # Roles
 
 ## wifi
-Sets the Raspberry Pi up to use a wi-fi network.
+Sets up the Raspberry Pi to use a wi-fi network.
 
 ## core
 Installs OS updates and some useful packages.
