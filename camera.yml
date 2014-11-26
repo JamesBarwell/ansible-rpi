@@ -1,0 +1,16 @@
+---
+- name: Raspberry Pi - Camera
+
+  hosts: camera
+  remote_user: pi
+  sudo: yes
+
+  vars_prompt:
+    - name: disable_camera_led
+      prompt: "Disable camera LED?"
+      default: no
+
+  roles:
+    - wifi
+    - core
+    - camera

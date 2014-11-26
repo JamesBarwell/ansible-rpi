@@ -1,0 +1,11 @@
+---
+- name: Raspberry Pi - Retropie
+
+  hosts: pi
+  remote_user: pi
+  sudo: yes
+
+  roles:
+    - wifi
+    - core
+    - retropie

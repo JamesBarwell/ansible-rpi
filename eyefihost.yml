@@ -1,0 +1,20 @@
+---
+- name: Raspberry Pi - Eye-Fi host
+
+  hosts: pi
+  remote_user: pi
+  sudo: yes
+
+  vars_prompt:
+    - name: eyefi_id
+      prompt: "Enter eye-fi card ID"
+      default: no
+
+    - name: eyefi_key
+      prompt: "Enter eye-fi card public key"
+      default: no
+
+  roles:
+    - wifi
+    - core
+    - eyefi_host

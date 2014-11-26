@@ -1,0 +1,16 @@
+---
+- name: Raspberry Pi - MPD host
+
+  hosts: pi
+  remote_user: pi
+  sudo: yes
+
+  vars_prompt:
+    - name: mpd_pass
+      prompt: "Enter MPD password"
+      default: 'N'
+
+  roles:
+    - wifi
+    - core
+    - mpd_host

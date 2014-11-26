@@ -1,0 +1,13 @@
+# wifi
+wifi_ssid: wifi
+wifi_pass: password
+
+# eyefi
+eyefi_id: 12345
+eyefi_pass: password
+
+# mpd
+mpd_pass: password
+
+# camera
+disable_camera_led: no
